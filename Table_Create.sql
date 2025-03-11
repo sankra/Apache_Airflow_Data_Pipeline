@@ -1,3 +1,4 @@
+#logic for creating sql tables with the given schema.
 CREATE TABLE public.artists (
 	artistid varchar(256) NOT NULL,
 	name varchar(256),
