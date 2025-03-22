@@ -4,7 +4,5 @@ Dynamic DAGs are DAGs that are generated programmatically at runtime—useful wh
 🧠 Use Cases for Dynamic Airflow:
 1. Process multiple S3 buckets or tables
 2. Multi-tenant pipelines
-
-File ingestion DAGs
-
-Parameterized ETL pipelines
+3. File ingestion DAGs
+4. Parameterized ETL pipelines
