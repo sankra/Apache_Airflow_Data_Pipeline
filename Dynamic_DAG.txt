@@ -1,2 +1,10 @@
-🚀 1. Dynamic DAGs in Apache Airflow
+🚀Dynamic DAGs in Apache Airflow
 Dynamic DAGs are DAGs that are generated programmatically at runtime—useful when you have multiple similar workflows (e.g., one per client, dataset, or table), and don’t want to write duplicate DAG code.
+
+🧠 Use Cases for Dynamic Airflow:
+1. Process multiple S3 buckets or tables
+2. Multi-tenant pipelines
+
+File ingestion DAGs
+
+Parameterized ETL pipelines
