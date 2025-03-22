@@ -23,5 +23,5 @@ for ds in datasets:
             python_callable=process_dataset,
             op_args=[ds]
         )
-
+    # Register the DAG
     globals()[dag.dag_id] = dag
