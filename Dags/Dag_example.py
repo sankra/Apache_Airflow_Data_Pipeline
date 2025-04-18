@@ -132,6 +132,8 @@ run_quality_checks = DataQualityOperator(
     redshift_conn_id = "redshift"
 )
 
+print('Everything is working fine')
+logging.info('Everything is working fine')
 end_operator = DummyOperator(task_id='Stop_execution',  dag=dag)
 
 
