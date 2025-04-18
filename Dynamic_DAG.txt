@@ -6,3 +6,4 @@ Dynamic DAGs are DAGs that are generated programmatically at runtime—useful wh
 2. Multi-tenant pipelines
 3. File ingestion DAGs
 4. Parameterized ETL pipelines
+5. Set up the automation for dataengineering tasks.
