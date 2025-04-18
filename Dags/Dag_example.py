@@ -2,11 +2,12 @@
 #The Python script defines an Apache Airflow DAG (Directed Acyclic Graph) for extracting, 
 #transforming, and loading (ETL) data into Amazon Redshift from Amazon S3.
 
-
+import sys
 
 from datetime import datetime, timedelta
 import os
 from airflow import DAG
+
 
 from airflow.contrib.hooks.aws_hook import AwsHook
 from airflow.hooks.postgres_hook import PostgresHook
