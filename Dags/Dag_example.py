@@ -3,9 +3,10 @@
 #transforming, and loading (ETL) data into Amazon Redshift from Amazon S3.
 
 import sys
+import os
+import logging
 
 from datetime import datetime, timedelta
-import os
 from airflow import DAG
 
 
