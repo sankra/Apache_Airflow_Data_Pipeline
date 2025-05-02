@@ -1,6 +1,14 @@
-import pandas as pd
+import pandas as pd 
 from datetime import datetime, timedelta
+query = """(deletedindicator == 'N') or (deletedindicator == 'Y' and lastupdatedate.dt.date > @lst_3months)"""
 
-query = "(deleteindicator == 'N') or (deleteindicator == 'Y' and lastupdatedate.dt.date > |month|)"
+data = {'deletedindicator': ['N' '٧', 'Y', 'N'], 'lastupdatedate': ['2025-01-10 02:02:03.677', '2025-02-20 16:50:03.677','2025-03-15 23:08:03.677']}
+df = pd.DataFrame(data)
+df['lastupdatedate'] = pd.to_datetime(df['lastupdatedate'])
+lst_3months= (pd.Timestamp.today() - pd.DateOffset(months=3)).date()
+print (lst_3months)
 
-data = {'deletedindicator': ['N', 'Y', 'Y', 'N'], 'lastupdatedate': ['2024-08']}
+required_month = df.query (query)
+print (required_month)
+print (type(required_month))
+print(required_month. shape[0])
