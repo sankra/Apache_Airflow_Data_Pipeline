@@ -28,3 +28,13 @@ def preprocess_data(input_file, output_file):
     
     # Save the preprocessed data
     df.to_csv(output_file, index=False)
+
+
+def main():
+    input_file = os.path.join(current_dir, 'data', 'input_data.csv')
+    output_file = os.path.join(current_dir, 'data', f'preprocessed_data_{current_date}_{current_time}.csv')
+    
+    preprocess_data(input_file, output_file)
+    print(f"Preprocessed data saved to {output_file}")
+if __name__ == "__main__":
+    main()
