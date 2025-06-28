@@ -5,6 +5,8 @@ import pandas as pd
 
 current_dir = os.path.dirname(os.path.abspath(__file__))
 sys.path.append(os.path.dirname(current_dir))
+# Get the current date and time for file naming
+sys.path.append(os.path.dirname(current_dir))
 
 current_date = datetime.datetime.now().strftime("%Y-%m-%d")
 current_time = datetime.datetime.now().strftime("%H-%M-%S")
