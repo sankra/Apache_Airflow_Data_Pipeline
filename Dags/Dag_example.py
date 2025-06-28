@@ -47,6 +47,7 @@ start_operator = PostgresOperator(
     dag=dag,
     postgres_conn_id="redshift",
     sql=create_tables.CREATE_TABLES_SQL
+    run_id = 'create_tables_run',
 )
 
 stage_events_to_redshift = StageToRedshiftOperator(
