@@ -10,6 +10,7 @@ sys.path.append(os.path.dirname(current_dir))
 
 current_date = datetime.datetime.now().strftime("%Y-%m-%d")
 current_time = datetime.datetime.now().strftime("%H-%M-%S")
+current_date_time = datetime.datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
 
 def preprocess_data(input_file, output_file):
     """
