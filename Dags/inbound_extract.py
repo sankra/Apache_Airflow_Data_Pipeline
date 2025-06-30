@@ -22,6 +22,7 @@ def preprocess_data(input_file, output_file):
     """
     # Read the data
     df = pd.read_csv(input_file)
+    df = df.dropna(axis=1, how='all')  # Drop columns that are completely null
     
     # Remove duplicates
     df.drop_duplicates(inplace=True)
