@@ -102,5 +102,6 @@ CREATE TABLE public.songplays (
 	sessionid int4,
 	location varchar(256),
 	user_agent varchar(256),
+	user_name varchar(256),
 	CONSTRAINT songplays_pkey PRIMARY KEY (playid)
 );
