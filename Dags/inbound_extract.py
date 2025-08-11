@@ -5,9 +5,12 @@ import pandas as pd
 
 current_dir = os.path.dirname(os.path.abspath(__file__))
 sys.path.append(os.path.dirname(current_dir))
+# Get the current date and time for file naming
+sys.path.append(os.path.dirname(current_dir))
 
 current_date = datetime.datetime.now().strftime("%Y-%m-%d")
 current_time = datetime.datetime.now().strftime("%H-%M-%S")
+current_date_time = datetime.datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
 
 def preprocess_data(input_file, output_file):
     """
@@ -19,6 +22,7 @@ def preprocess_data(input_file, output_file):
     """
     # Read the data
     df = pd.read_csv(input_file)
+    df = df.dropna(axis=1, how='all')  # Drop columns that are completely null
     
     # Remove duplicates
     df.drop_duplicates(inplace=True)
