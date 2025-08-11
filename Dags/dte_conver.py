@@ -12,6 +12,10 @@ df = pd.DataFrame(data)
 df['lastupdatedate'] = pd.to_datetime(df['lastupdatedate'])
 lst_3months= (pd.Timestamp.today() - pd.DateOffset(months=3)).date()
 print (lst_3months)
+print (type(lst_3months))
+print (df)
+# Filter the DataFrame based on the query
+# Ensure the 'lastupdatedate' column is in datetime format
 
 required_month = df.query (query)
 print (required_month)
