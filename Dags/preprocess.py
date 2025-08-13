@@ -25,7 +25,10 @@ def preprocess_data(input_file, output_file):
     # Ensure the 'lastupdatedate' column is in datetime format
     if 'lastupdatedate' in df.columns:
         df['lastupdatedate'] = pd.to_datetime(df['lastupdatedate'], errors='coerce')
+    else:
+        raise ValueError("The input file must contain a 'lastupdatedate' column.")
     
+    for 
     # Remove duplicates
     df.drop_duplicates(inplace=True)
     
