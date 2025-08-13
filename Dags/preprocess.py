@@ -1,5 +1,7 @@
 import datetime
 import os
+import json
+# -*- coding: utf-8 -*-
 import sys
 import pandas as pd
 
@@ -19,6 +21,10 @@ def preprocess_data(input_file, output_file):
     """
     # Read the data
     df = pd.read_csv(input_file)
+    
+    # Ensure the 'lastupdatedate' column is in datetime format
+    if 'lastupdatedate' in df.columns:
+        df['lastupdatedate'] = pd.to_datetime(df['lastupdatedate'], errors='coerce')
     
     # Remove duplicates
     df.drop_duplicates(inplace=True)
