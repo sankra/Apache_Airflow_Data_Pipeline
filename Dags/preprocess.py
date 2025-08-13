@@ -28,7 +28,11 @@ def preprocess_data(input_file, output_file):
     else:
         raise ValueError("The input file must contain a 'lastupdatedate' column.")
     
-    for 
+    for column in df.columns:
+        if df[column].dtype == 'object':
+            # Convert string columns to lowercase
+            df[column] = df[column].str.lower()
+    
     # Remove duplicates
     df.drop_duplicates(inplace=True)
     
