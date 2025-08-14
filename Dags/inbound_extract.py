@@ -32,6 +32,8 @@ def preprocess_data(input_file, output_file):
     
     # Remove rows with null values
     df.dropna(inplace=True)
+    df.dropna(axis=1, how='all', inplace=True)  # Drop columns that are completely null
+    df['lastupdatedate'] = pd.to_datetime(df['lastupdatedate'], errors='coerce')
     
     # Save the preprocessed data
     df.to_csv(output_file, index=False)
