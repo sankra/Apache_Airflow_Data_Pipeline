@@ -26,6 +26,9 @@ def preprocess_data(input_file, output_file):
     
     # Remove duplicates
     df.drop_duplicates(inplace=True)
+
+    df.absorbance = df.absorbance.astype(str)  # Convert absorbance to string if not already
+    # Ensure the 'lastupdatedate' column is in datetime format
     
     # Remove rows with null values
     df.dropna(inplace=True)
