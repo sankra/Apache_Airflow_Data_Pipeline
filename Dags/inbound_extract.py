@@ -49,7 +49,8 @@ def main():
     output_file = os.path.join(current_dir, 'data', f'preprocessed_data_{current_date}_{current_time}.csv')
 
     extracted_data = pd.read_csv(input_file)
-    extracted_data['lastupdatedate'] = pd.to_datetime(extracted_data['lastupdatedate
+    extracted_data['lastupdatedate'] = pd.to_datetime(extracted_data['lastupdatedate'], errors='coerce')
+    extracted_data.dropna(subset=['lastupdatedate'], inplace=True)
     
     preprocess_data(input_file, output_file)
     print(f"Preprocessed data saved to {output_file}")
