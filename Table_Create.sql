@@ -99,6 +99,8 @@ CREATE TABLE public.songplays (
 	"level" varchar(256),
 	party_id int NOT NULL,
 	-- Assuming party_id is an integer, adjust as necessary
+	territory varchar(256),
+	-- Assuming territory is a string, adjust as necessary
 	songid varchar(256),
 	artistid varchar(256),
 	sessionid int4,
