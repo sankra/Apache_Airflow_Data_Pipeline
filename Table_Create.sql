@@ -97,6 +97,7 @@ CREATE TABLE public.songplays (
 	start_time timestamp NOT NULL,
 	userid int4 NOT NULL,
 	"level" varchar(256),
+	party_id int4,
 	songid varchar(256),
 	artistid varchar(256),
 	sessionid int4,
