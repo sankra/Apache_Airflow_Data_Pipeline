@@ -56,4 +56,5 @@ def main():
     print(f"Preprocessed data saved to {output_file}")
     
 if __name__ == "__main__":
+    preprocess_data(input_file, output_file)
     main()
