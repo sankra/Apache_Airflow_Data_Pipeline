@@ -57,5 +57,6 @@ def main():
     
 if __name__ == "__main__":
     input_file = os.path.join(current_dir, 'data', 'input_data.csv')
+    output_file = os.path.join(current_dir, 'data', f'preprocessed_data_{current_date}_{current_time}.csv')
     preprocess_data(input_file, output_file)
     main()
