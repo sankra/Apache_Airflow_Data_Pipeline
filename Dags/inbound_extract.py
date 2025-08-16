@@ -56,7 +56,9 @@ def main():
     print(f"Preprocessed data saved to {output_file}")
     
 if __name__ == "__main__":
+    #input file for preprocessing
     input_file = os.path.join(current_dir, 'data', 'input_data.csv')
+    #output file for preprocessed data
     output_file = os.path.join(current_dir, 'data', f'preprocessed_data_{current_date}_{current_time}.csv')
     preprocess_data(input_file, output_file)
     main()
