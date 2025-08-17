@@ -3,6 +3,9 @@ import sys
 import pandas as pd 
 from datetime import datetime, timedelta
 from dateutil.relativedelta import relativedelta
+import json
+current_dir = os.path.dirname(os.path.abspath(__file__))
+sys.path.append(os.path.dirname(current_dir))
 
 
 query = """(deletedindicator == 'N') or (deletedindicator == 'Y' and lastupdatedate.dt.date > @lst_3months)"""
