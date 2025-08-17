@@ -10,7 +10,9 @@ query = """(deletedindicator == 'N') or (deletedindicator == 'Y' and lastupdated
 data = {'deletedindicator': ['N' 'Y', 'Y', 'N'], 'lastupdatedate': ['2025-01-10 02:02:03.677', '2025-02-20 16:50:03.677','2025-03-15 23:08:03.677']}
 df = pd.DataFrame(data)
 df['lastupdatedate'] = pd.to_datetime(df['lastupdatedate'])
+lst_3months = (pd.Timestamp.today() - pd.DateOffset(months=3)).date()
 lst_3months= (pd.Timestamp.today() - pd.DateOffset(months=3)).date()
+
 print (lst_3months)
 print (type(lst_3months))
 print (df)
