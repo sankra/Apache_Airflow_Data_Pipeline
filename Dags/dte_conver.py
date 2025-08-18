@@ -27,4 +27,6 @@ print (required_month)
 print (type(required_month))
 print(required_month.shape[0])
 print (required_month.shape[1])
+print (required_month.shape[2])
+
 print (required_month.columns)
