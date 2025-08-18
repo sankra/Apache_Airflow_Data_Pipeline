@@ -15,6 +15,7 @@ df = pd.DataFrame(data)
 df['lastupdatedate'] = pd.to_datetime(df['lastupdatedate'])
 lst_3months = (pd.Timestamp.today() - pd.DateOffset(months=3)).date()
 lst_3months= (pd.Timestamp.today() - pd.DateOffset(months=3)).date()
+pre_3months = (pd.Timestamp.today() + pd.DateOffset(months=3)).date()
 
 print (lst_3months)
 print (type(lst_3months))
