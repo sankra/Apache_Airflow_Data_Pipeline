@@ -4,7 +4,6 @@ import pandas as pd
 from datetime import datetime, timedelta
 from dateutil.relativedelta import relativedelta
 import json
-import wrangler as wr
 current_dir = os.path.dirname(os.path.abspath(__file__))
 sys.path.append(os.path.dirname(current_dir))
 
@@ -17,6 +16,9 @@ df['lastupdatedate'] = pd.to_datetime(df['lastupdatedate'])
 lst_3months = (pd.Timestamp.today() - pd.DateOffset(months=3)).date()
 lst_3months= (pd.Timestamp.today() - pd.DateOffset(months=3)).date()
 pre_3months = (pd.Timestamp.today() + pd.DateOffset(months=3)).date()
+
+# Print the values for debugging
+print("3 months ago:", lst_3months)
 
 print (lst_3months)
 print (type(lst_3months))
